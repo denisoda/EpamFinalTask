@@ -9,26 +9,30 @@ namespace BLL
 {
     public class ShopService : IShopService
     {
+        private readonly IProductRepository _repository;
+        public IFinderStrategy<Product> Finder { get; }
+
+        public ShopService(IProductRepository repository, IFinderStrategy<Product> finderAlgorithm)
+        {
+            _repository = repository;
+            Finder = finderAlgorithm;
+        }
+
         #region IShopService Members
 
         void IShopService.Add(Product product)
         {
-            throw new NotImplementedException();
+            _repository?.Add(product);
         }
 
         void IShopService.Remove(Product product)
         {
-            throw new NotImplementedException();
+            _repository?.Delete(product);
         }
 
-        public IFinderStrategy<Product> LowestPriceFinderStrategy(List<Product> products)
+        IFinderStrategy<Product> IShopService.LowestPriceFinderStrategy(List<Product> products, string nameOfItem, int range)
         {
-            throw new NotImplementedException();
-        }
-
-        IFinderStrategy<Product> IShopService.LowestPriceFinderStrategy(List<Product> products)
-        {
-            throw new NotImplementedException();
+            Finder.Find(products, nameOfItem, range);
         }
         
         #endregion

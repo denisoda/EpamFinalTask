@@ -48,7 +48,7 @@ namespace DLL
             if (_storage == null)
                 throw new NullReferenceException();
 
-            _storage.Where(s => s == productForUpdate).FirstOrDefault() ;
+            _storage.Where(s => s == productForUpdate).FirstOrDefault();
         }
 
         public List<Product> GetAllProducts()
