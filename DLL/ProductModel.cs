@@ -11,8 +11,12 @@ namespace DLL
     /// </summary>
     public class Product
     {
+        #region Public fields
+
         public int Id;
         public string Description;
         public double Price;
+        
+        #endregion
     }
 }

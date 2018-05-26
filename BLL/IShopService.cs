@@ -1,4 +1,5 @@
-﻿using DLL;
+﻿using System.Collections.Generic;
+using DLL;
 
 namespace BLL
 {
@@ -9,6 +10,6 @@ namespace BLL
     {
         void Add(Product product);
         void Remove(Product product);
-        Product Find(Product product);
+        IFinderStrategy<Product> SortingStrategy(List<Product> products);
     }
 }
