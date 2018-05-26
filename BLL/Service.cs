@@ -21,7 +21,12 @@ namespace BLL
             throw new NotImplementedException();
         }
 
-        IFinderStrategy<Product> IShopService.SortingStrategy(List<Product> products)
+        public IFinderStrategy<Product> LowestPriceFinderStrategy(List<Product> products)
+        {
+            throw new NotImplementedException();
+        }
+
+        IFinderStrategy<Product> IShopService.LowestPriceFinderStrategy(List<Product> products)
         {
             throw new NotImplementedException();
         }

@@ -46,6 +46,7 @@
     <Compile Include="IFinderStrategy.cs" />
     <Compile Include="IShopService.cs" />
     <Compile Include="SearchAlrogorithms\BinarySearch.cs" />
+    <Compile Include="SearchAlrogorithms\FSLWay.cs" />
     <Compile Include="Service.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

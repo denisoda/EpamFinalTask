@@ -4,6 +4,6 @@ namespace BLL
 {
     public interface IFinderStrategy<T> where T : class
     {
-        T Find(List<T> item);
+        T Find(List<T> storage , T item);
     }
 }

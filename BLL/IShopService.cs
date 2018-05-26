@@ -10,6 +10,6 @@ namespace BLL
     {
         void Add(Product product);
         void Remove(Product product);
-        IFinderStrategy<Product> SortingStrategy(List<Product> products);
+        IFinderStrategy<Product> LowestPriceFinderStrategy(List<Product> products);
     }
 }
