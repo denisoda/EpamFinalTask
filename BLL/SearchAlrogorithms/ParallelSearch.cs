@@ -23,8 +23,6 @@ namespace BLL.SearchAlrogorithms
                     }
                 }
             );
-
-
             
             return products.OrderBy(s => s.Price).Reverse().Take(10).Reverse().ToList();
         }

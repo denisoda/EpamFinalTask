@@ -30,9 +30,9 @@ namespace BLL
             _repository?.Delete(product);
         }
 
-        IFinderStrategy<Product> IShopService.LowestPriceFinderStrategy(List<Product> products, string nameOfItem, int range)
+        IFinderStrategy<Product> IShopService.LowestPriceFinderStrategy(List<Product> products)
         {
-            Finder.Find(products, nameOfItem, range);
+            return 
         }
         
         #endregion
