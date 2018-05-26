@@ -8,7 +8,8 @@ namespace BLL.SearchAlrogorithms
     {
         public Product Find(List<Product> item)
         {
-            throw new System.NotImplementedException();
+            item.Sort();
+
         }
     }
 }

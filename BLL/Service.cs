@@ -10,6 +10,7 @@ namespace BLL
     public class ShopService : IShopService
     {
         #region IShopService Members
+
         void IShopService.Add(Product product)
         {
             throw new NotImplementedException();
@@ -24,6 +25,7 @@ namespace BLL
         {
             throw new NotImplementedException();
         }
+        
         #endregion
     }
 }
