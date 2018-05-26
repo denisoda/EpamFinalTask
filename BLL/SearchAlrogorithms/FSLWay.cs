@@ -6,6 +6,13 @@ namespace BLL.SearchAlrogorithms
 {
     public class FSLWay : IFinderStrategy<Product>
     {
-        public Product Find(List<Product> storage, Product item) => storage.OrderBy(p => p.Price).First(p => p.Description == item.Description);
+        public IList<Product> Find(IList<Product> productStorage, string item)
+        {
+            var s = productStorage;
+
+            var a = productStorage.OrderBy(z => z.Price).Select(z => z.Price).First();
+
+            return new List<Product>();
+        }
     }
 }
