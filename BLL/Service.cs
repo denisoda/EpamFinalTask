@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BLL.SearchAlrogorithms;
 using DLL;
 
 namespace BLL
@@ -43,11 +44,11 @@ namespace BLL
             _repository?.Delete(product);
         }
 
-        IFinderStrategy<Product> IShopService.LowestPriceFinderStrategy(List<Product> products)
+        public IList<Product> FindChipest(string name, int number)
         {
-            return Finder.Find(products, "", 10);
+            return Finder.Find(_repository.GetAllProducts(),name, number);
         }
-        
+
         #endregion
     }
 }
