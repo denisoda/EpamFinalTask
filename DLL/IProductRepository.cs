@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace DLL
 {
+    /// <summary>
+    /// An abstact layer for data manipulation
+    /// </summary>
     public interface IProductRepository
     {
         void Add(Product product);
