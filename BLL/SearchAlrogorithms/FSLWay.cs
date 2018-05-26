@@ -6,7 +6,7 @@ namespace BLL.SearchAlrogorithms
 {
     public class FSLWay : IFinderStrategy<Product>
     {
-        public IList<Product> Find(IList<Product> productStorage, string item)
+        public IList<Product> Find(IList<Product> productStorage, string item, int num)
         {
             var s = productStorage;
 

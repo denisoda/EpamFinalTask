@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using DLL;
 
@@ -6,17 +7,17 @@ namespace BLL.SearchAlrogorithms
 {
     public class Linear : IFinderStrategy<Product>
     {
-        public IList<Product> Find(IList<Product> productStorage, string item)
+        public IList<Product> Find(IList<Product> productStorage, string item, int num)
         {
-            foreach (var product in productStorage.ToList())
+            IList<Product> items = new List<Product>();
+
+            foreach (var product in productStorage)
             {
-                if (product.Description != item)
-                    productStorage.Remove(product);
+                if(product.Description == item)
+                    items.Add(product);
             }
 
-            productStorage.OrderBy(s => s.Price).Reverse().Take(10).Reverse();
-
-            return productStorage;
+            return items.OrderBy(s => s.Price).Reverse().Take(num).Reverse().ToList();
         }
     }
 }
