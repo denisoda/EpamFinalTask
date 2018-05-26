@@ -47,7 +47,8 @@
     <Compile Include="IShopService.cs" />
     <Compile Include="SearchAlrogorithms\BinarySearch.cs" />
     <Compile Include="SearchAlrogorithms\FSLWay.cs" />
-    <Compile Include="SearchAlrogorithms\Serach.cs" />
+    <Compile Include="SearchAlrogorithms\Linear.cs" />
+    <Compile Include="SearchAlrogorithms\ParallelSerach.cs" />
     <Compile Include="Service.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

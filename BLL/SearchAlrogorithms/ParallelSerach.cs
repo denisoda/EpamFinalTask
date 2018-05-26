@@ -9,12 +9,18 @@ namespace BLL.SearchAlrogorithms
     {
         public IList<Product> Find(IList<Product> storage, string item)
         {
+            object sync = new object();;
+
             Parallel.ForEach(storage, product =>
                 {
-                    if (product.Description != item)
-                        storage.Remove(product);
+                    lock (sync)
+                    {
+                        if (product.Description != item)
+                            product = null;
+                    }
                 }
             );
+            
 
             return storage;
         }
